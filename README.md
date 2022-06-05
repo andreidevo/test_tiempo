@@ -9,7 +9,7 @@ Inicio
  • Hay tres ciudades en la pantalla de Inicio y puedes ver el clima durante 5 días  
  • También puede elegir español o Inglés  
 Arquitectura  
-Hemos separado UI (View) / Modelos (Model) y la lógica BLoC (ViewModel)  
+Hemos separado Modelos (Model) / UI (View) y la lógica BLoC (ViewModel)  
  1 Ui: Tenemos la carpeta de pantallas (Para Paginas) y la carpeta de Widgets (para Widgets generales)  
  2 Modelos: Tenemos modelo de Weather, se definió toda la información importante.  
  3 BLoC: Tenemos Wheather/idioma y formulario BLoC:  
