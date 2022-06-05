@@ -7,7 +7,6 @@ Un app meteorológico
 Inicio  
  • Diseño hecho en Figma  
  • Hay tres ciudades en la pantalla de Inicio y puedes ver el clima durante 5 días  
-
  • También puede elegir español o Inglés  
 Arquitectura  
 MVVM: hemos separado UI (View) / Modelos (Model) y la lógica BLoC (ViewModel)  
