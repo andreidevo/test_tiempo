@@ -8,7 +8,6 @@ import 'package:test_tiempo/blocs/weather/weather_event.dart';
 import 'package:test_tiempo/blocs/weather/weather_state.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:test_tiempo/ui/screens/form/form_screen.dart';
-
 import 'package:test_tiempo/ui/screens/weather/widgets/weather_avatar.dart';
 import 'package:test_tiempo/ui/screens/weather/widgets/weather_desctiption.dart';
 import 'package:test_tiempo/ui/screens/weather/widgets/weather_row.dart';
@@ -85,7 +84,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               WeatherDescription(
                                 title: state.weatherData.weatherDays[state.pickedDay].weatherUiState.name,
                                 temperatureMax: state.weatherData.weatherDays[state.pickedDay].temperatureMax,
-                                temperatureMin: state.weatherData.weatherDays[state.pickedDay].temperatureMin
+                                temperatureMin: state.weatherData.weatherDays[state.pickedDay].temperatureMin,
+                                fontSize: 27,
                               ),
                               for (int i = 0; i < state.weatherData.weatherDays.length; i++)
                                 WeatherRow(

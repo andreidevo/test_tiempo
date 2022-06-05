@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_tiempo/blocs/form/form_bloc.dart';
@@ -9,7 +7,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:test_tiempo/ui/widgets/button_widget.dart';
 
 class FormScreen extends StatelessWidget {
-
 
   const FormScreen({Key? key}) : super(key: key);
 
@@ -31,9 +28,6 @@ class FormScreen extends StatelessWidget {
                 buttonState = ButtonWidgetEnum.completed;
               }
 
-              print("STATE");
-              print(buttonState);
-
               return Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Column(
@@ -47,13 +41,17 @@ class FormScreen extends StatelessWidget {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                            color: (status.nameError) ? Colors.redAccent : Color(0xFFBDBDBD),
+                            color: (status.nameError) ?
+                              Colors.redAccent :
+                              const Color(0xFFBDBDBD),
                             width: 2),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                            color: (status.nameError) ? Colors.redAccent : Color(0xFF562BF7),
+                            color: (status.nameError) ?
+                              Colors.redAccent :
+                              const Color(0xFF562BF7),
                             width: 2),
                         ),
                         filled: true,
@@ -76,13 +74,17 @@ class FormScreen extends StatelessWidget {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                            color: (status.dateError) ? Colors.redAccent : Color(0xFFBDBDBD),
+                            color: (status.dateError) ?
+                              Colors.redAccent :
+                              const Color(0xFFBDBDBD),
                             width: 2),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                            color: (status.dateError) ? Colors.redAccent : Color(0xFF562BF7),
+                            color: (status.dateError) ?
+                              Colors.redAccent :
+                              const Color(0xFF562BF7),
                             width: 2),
                         ),
                         filled: true,
@@ -105,14 +107,18 @@ class FormScreen extends StatelessWidget {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                            color: (status.cityError) ? Colors.redAccent : Color(0xFFBDBDBD),
+                            color: (status.cityError) ?
+                              Colors.redAccent :
+                              const Color(0xFFBDBDBD),
                             width: 2),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                              color: (status.cityError) ? Colors.redAccent : Color(0xFF562BF7),
-                              width: 2),
+                            color: (status.cityError) ?
+                              Colors.redAccent :
+                              const Color(0xFF562BF7),
+                            width: 2),
                         ),
                         filled: true,
                         hintStyle: TextStyle(color: Colors.grey[800]),
@@ -134,13 +140,17 @@ class FormScreen extends StatelessWidget {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                            color: (status.emailError) ? Colors.redAccent : Color(0xFFBDBDBD),
+                            color: (status.emailError) ?
+                              Colors.redAccent :
+                              const Color(0xFFBDBDBD),
                             width: 2),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                            color: (status.emailError) ? Colors.redAccent : Color(0xFF562BF7),
+                            color: (status.emailError) ?
+                              Colors.redAccent :
+                              const Color(0xFF562BF7),
                             width: 2),
                         ),
                         filled: true,
@@ -163,13 +173,17 @@ class FormScreen extends StatelessWidget {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                              color: (status.phoneError) ? Colors.redAccent : Color(0xFFBDBDBD),
-                              width: 2),
+                            color: (status.phoneError) ?
+                              Colors.redAccent :
+                              const Color(0xFFBDBDBD),
+                            width: 2),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide(
-                            color: (status.phoneError) ? Colors.redAccent : Color(0xFF562BF7),
+                            color: (status.phoneError) ?
+                              Colors.redAccent :
+                              const Color(0xFF562BF7),
                             width: 2),
                         ),
                         filled: true,

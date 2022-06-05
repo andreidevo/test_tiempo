@@ -1,7 +1,6 @@
 import 'package:equatable/equatable.dart';
 
 enum FormStateStatus { none, filled, validated, errors }
-enum FormStateFields { name, email, phone, city, date}
 
 class FormBlocStatusClass{
 

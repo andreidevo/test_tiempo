@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:test_tiempo/Utils/utils.dart';
+import 'package:test_tiempo/ui/screens/weather/widgets/weather_desctiption.dart';
 
 class WeatherRow extends StatelessWidget {
 
@@ -56,15 +57,11 @@ class WeatherRow extends StatelessWidget {
                 ),
               ),
               Center(
-                child: Text(
-                  Utils().getTemperature(
-                    max: temperatureMax,
-                    min: temperatureMin
-                  ),
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w700
-                  ),
-                ),
+                child: WeatherDescription(
+                  temperatureMin: temperatureMin,
+                  temperatureMax: temperatureMax,
+                  fontSize: 15,
+                )
               ),
               Align(
                 alignment: Alignment.centerRight,
@@ -73,7 +70,6 @@ class WeatherRow extends StatelessWidget {
                   height: 64, width: 64,
                 ),
               ),
-
             ],
           )
         ),
