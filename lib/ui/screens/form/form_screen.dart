@@ -200,7 +200,6 @@ class FormScreen extends StatelessWidget {
                           context.read<FormBloc>().add(
                             ClearEvent()
                           );
-                          
                           Navigator.pop(context);
                         }
                       }
