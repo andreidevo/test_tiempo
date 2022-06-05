@@ -64,7 +64,7 @@ class Utils{
   }
 
   String getTemperature({required int max, required int min}){
-    return "$max° / $min°";
+    return "min:$min° max:$max°";
   }
 
 }
