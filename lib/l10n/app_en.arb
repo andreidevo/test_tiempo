@@ -1,5 +1,6 @@
 {
     "language": "en",
+    "form": "form",
     "london": "London",
     "toronto": "Toronto",
     "singapore": "Singapore",
@@ -14,5 +15,12 @@
     "september": "September",
     "october": "October",
     "november": "November",
-    "december": "December"
+    "december": "December",
+    "name": "Your Name",
+    "birthday": "Your birthday",
+    "city": "Your City",
+    "email": "Your Email",
+    "phone": "Your phone",
+    "send": "Send",
+    "exit": "Back"
 }

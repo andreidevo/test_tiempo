@@ -7,13 +7,28 @@ import 'package:test_tiempo/blocs/weather/weather_bloc.dart';
 import 'package:test_tiempo/blocs/weather/weather_event.dart';
 import 'package:test_tiempo/blocs/weather/weather_state.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:test_tiempo/ui/screens/form/form_screen.dart';
+
 import 'package:test_tiempo/ui/screens/weather/widgets/weather_avatar.dart';
 import 'package:test_tiempo/ui/screens/weather/widgets/weather_desctiption.dart';
 import 'package:test_tiempo/ui/screens/weather/widgets/weather_row.dart';
 import 'package:test_tiempo/ui/widgets/button_widget.dart';
 
-class WeatherScreen extends StatelessWidget {
+class WeatherScreen extends StatefulWidget {
   const WeatherScreen({Key? key}) : super(key: key);
+
+  @override
+  State<WeatherScreen> createState() => _WeatherScreenState();
+}
+
+class _WeatherScreenState extends State<WeatherScreen> {
+  void pushToForm(){
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const FormScreen(),
+      )
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +154,8 @@ class WeatherScreen extends StatelessWidget {
                                 width: (MediaQuery.of(context).size.width - 60) / 3,
                                 height: 60,
                                 content: AppLocalizations.of(context)!.toronto,
-                                active: (city == CitiesEnum.toronto),
+                                buttonState: (city == CitiesEnum.toronto) ?
+                                  ButtonWidgetEnum.active : ButtonWidgetEnum.inactive,
                                 onTap: (){
                                   BlocProvider.of<WeatherBloc>(context).add(
                                     LoadWeatherEvent(
@@ -155,7 +171,8 @@ class WeatherScreen extends StatelessWidget {
                                 width: (MediaQuery.of(context).size.width - 60) / 3,
                                 height: 60,
                                 content: AppLocalizations.of(context)!.london,
-                                active: (city == CitiesEnum.london),
+                                buttonState: (city == CitiesEnum.london) ?
+                                  ButtonWidgetEnum.active : ButtonWidgetEnum.inactive,
                                 onTap: (){
                                   BlocProvider.of<WeatherBloc>(context).add(
                                     LoadWeatherEvent(
@@ -171,14 +188,15 @@ class WeatherScreen extends StatelessWidget {
                                 width: (MediaQuery.of(context).size.width - 60) / 3,
                                 height: 60,
                                 content: AppLocalizations.of(context)!.singapore,
-                                active: (city == CitiesEnum.singapore),
+                                buttonState: (city == CitiesEnum.singapore) ?
+                                  ButtonWidgetEnum.active : ButtonWidgetEnum.inactive,
                                 onTap: (){
                                   BlocProvider.of<WeatherBloc>(context).add(
-                                      LoadWeatherEvent(
-                                          CitiesEnum.singapore,
-                                          AppLocalizations.of(context)!.language,
-                                          pickedDay
-                                      )
+                                    LoadWeatherEvent(
+                                      CitiesEnum.singapore,
+                                      AppLocalizations.of(context)!.language,
+                                      pickedDay
+                                    )
                                   );
                                 },
                               ),
@@ -186,7 +204,17 @@ class WeatherScreen extends StatelessWidget {
 
                             ],
                           ),
-
+                          SizedBox(height: 10,),
+                          ButtonWidget(
+                            width: (MediaQuery.of(context).size.width - 40),
+                            height: 40,
+                            content: AppLocalizations.of(context)!.form,
+                            buttonState: ButtonWidgetEnum.inactive,
+                            onTap: (){
+                              // open new screen
+                              pushToForm();
+                            },
+                          ),
                         ],
                       ),
                     ),
