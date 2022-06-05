@@ -53,6 +53,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       child: ListView(
                         physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                         children: [
+
                           Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -103,7 +104,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       )
                                     );
                                   },
-                                )
+                                ),
+                              SizedBox(
+                                height: MediaQuery.of(context).size.height / 5,
+                              ),
 
                             ],
                           )

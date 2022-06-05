@@ -30,9 +30,12 @@ class FormScreen extends StatelessWidget {
 
               return Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: ListView(
+                  physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
                   children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height / 7,
+                    ),
                     TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -217,7 +220,10 @@ class FormScreen extends StatelessWidget {
                           Navigator.pop(context);
                         }
                       }
-                    )
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height / 7,
+                    ),
                   ],
                 ),
               );
