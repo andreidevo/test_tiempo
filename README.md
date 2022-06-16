@@ -8,6 +8,7 @@ Inicio
  • Diseño hecho en Figma  
  • Hay tres ciudades en la pantalla de Inicio y puedes ver el clima durante 5 días  
  • También puede elegir español o Inglés  
+ 
 Arquitectura  
 Hemos separado Modelos (Model) / UI (View) y la lógica BLoC (ViewModel)  
  1 Ui: Tenemos la carpeta de pantallas (Para Paginas) y la carpeta de Widgets (para Widgets generales)  
